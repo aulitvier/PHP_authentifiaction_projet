@@ -23,12 +23,6 @@ while ($a = $my_request->fetch()) {
     } else {
         $authorization = "invite";
     }
-    echo "<tr>
-            <td>$a[nom]</td>
-            <td>$authorization</td>
-            <td><a href='display_page.php?id=$a[id]'>Lire</a></td><br/>
-            <td><a href='modify_page.php?id=$a[id]'>Modifier</a></td><br/>
-        </tr>
-        <br/>";
+        require("templates/work_user_page_html.php");
 };
 ?>

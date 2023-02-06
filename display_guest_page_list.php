@@ -7,15 +7,16 @@ $user_home_admin->delayExceeded();
 // $user_home_admin->rafreshPage();
 $user_display_guest_page = new CreatePage();
 $user_display_guest_page->connect();
-$user_display_guest_page->selectGuestPage($_POST["authorization"]);
-?>
-    <h1>Pages</h1>
-    <?php
+$authorization = true;
+$my_request = $user_display_guest_page->selectGuestPage($authorization);
+
+echo "<h1>Pages</h1>";
+
 while ($a = $my_request->fetch()) {
-    $authorization = "invite";
+    $authorization_guest = "invite";
     echo "<tr>
             <td>$a[nom]</td>
-            <td>$authorization</td>
+            <td>$authorization_guest</td>
             <td><a href='display_page.php?id=$a[id]'>Lire</a></td><br/>
         </tr>
         <br/>";

@@ -2,7 +2,7 @@
 require "class/AskReconnection.php";
 $user_home_admin = new AskReconnection();
 $user_home_admin->delayExceeded();
-// $user_home_admin->rafreshPage();
+// $user_home_admin->refreshPage();
 
 try {
     $myDB = new PDO("mysql:host=localhost;dbname=authentification", "root", "");
@@ -21,15 +21,4 @@ try {
     else {
         $authorization_agree = "invite";
     }
-    echo "<!DOCTYPE html>
-        <html lang='fr'>
-        <head>
-            <meta charset='UTF-8'>
-            <title>$a[nom]</title>
-        </head>
-        <body>
-            <h1>$a[titre]</h1><br/>
-            <p>Cette page est disponible pour $authorization_agree</p><br/>
-            <P>$a[paragraphe]</p>
-        </body>
-        </html>";
+require("templates/display_page_html.php");

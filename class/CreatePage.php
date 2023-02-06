@@ -6,7 +6,7 @@ class CreatePage {
     public $myDataBase;
     public function authorization() {
         if (isset($_POST["name_page"]) && !empty($_POST["name_page"]) && isset($_POST["title_page"]) 
-        && !empty($_POST["title_page"]) && isset($_POST["paragraph"]) && !empty($_POST["paragraph"])
+        && !empty($_POST["title_page"]) && isset($_POST["paragraphe"]) && !empty($_POST["paragraphe"])
         && isset($_POST["authorization"]) && !empty($_POST["authorization"])) {
             return true;
         } else {
@@ -63,6 +63,7 @@ class CreatePage {
     public function selectGuestPage($authorization) {
         $request = $this->myDataBase->prepare("SELECT * FROM page WHERE page_invite = ?");
         $request->execute(array($authorization));
+        return $request;
     }
 
 }   
