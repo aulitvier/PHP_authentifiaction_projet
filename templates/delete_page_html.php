@@ -1,6 +1,10 @@
 <?php
 
-echo " <p>id : $a[id]</p>
+echo " 
+    <form action='connection.html'>
+        <button>Accueil</button>
+    </form>
+        <p>id : $a[id]</p>
         <p>nom de la page : $a[nom]</p>
         <p>titre de la page : $a[titre]</p>
         <p>droit : $authorization_agree</p>

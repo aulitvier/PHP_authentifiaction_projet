@@ -11,8 +11,8 @@ public $myDataBase;
 public function allFieldRegistrationFilled() {
     if (isset($_POST["nom"]) && !empty($_POST["nom"]) && isset($_POST["prenom"]) && !empty($_POST["prenom"])
     && isset($_POST["pseudo"]) && !empty($_POST["pseudo"]) && isset($_POST["age"]) && !empty($_POST["age"])
-    && isset($_POST["mail"]) && !empty($_POST["mail"]) && isset($_POST["MDP"]) && !empty($_POST["MDP"]) && isset($_POST["confirmation_MDP"])
-    && !empty($_POST["confirmation_MDP"])) {
+    && isset($_POST["mail"]) && !empty($_POST["mail"]) && isset($_POST["MDP"]) && !empty($_POST["MDP"]) 
+    && isset($_POST["confirmation_MDP"]) && !empty($_POST["confirmation_MDP"])) {
         return true;
     } else {
         return false;
@@ -38,14 +38,12 @@ public function connect() {
 public function checkPassword($authorization, $password_given, $confirmation_password_given) {
     if ($authorization) {
         if ($password_given === $confirmation_password_given) {
-            return $valid_password = true;
-            // ci-dessus d'après ce que j'ai compris c'est que plus le nombre est grand plus il y a d'opération 
-            // qui est éffectuée pour hasher le MDP     
+            return $valid_password = true;     
         } else {
             return $valid_password = false;
         }
     } else {
-        echo "tout les champs ne sont pas remplie";
+        echo "tous les champs ne sont pas remplie";
     }
     
 }
@@ -67,8 +65,6 @@ public function hashPassword($authorization, $valid_password, $password_given) {
             return false;
         }
     }
-    
-    
 }
 
 /**

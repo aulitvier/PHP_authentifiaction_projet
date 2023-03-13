@@ -1,0 +1,21 @@
+/* #form_connection {
+    text-align: center;
+} */
+#form_connection {
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+#form_registration {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+#form_create_page {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}

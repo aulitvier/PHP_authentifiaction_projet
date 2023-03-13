@@ -55,10 +55,10 @@ class ModifyUserDataBase {
         return $a;
     }
     public function knowAuthorization($request_fetch) {
-            if ($request_fetch["authorization"] == 1) {
+            if ($request_fetch["droit"] == 1) {
                 return $authorization_agree = "administrateur";
             }
-            else if ($request_fetch["authorization"] == 2) {
+            else if ($request_fetch["droit"] == 2) {
                 return $authorization_agree = "utilisateur";
             }
             else {

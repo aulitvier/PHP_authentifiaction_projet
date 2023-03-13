@@ -5,6 +5,9 @@ echo "<!DOCTYPE html>
 
 </head>
 <body>
+    <form action='connection.html'>
+        <button>Accueil</button>
+    </form>
     <form action='processing/registration_processing.php' method='post'>
         <div>
             <label for='nom'>Nom :</label>

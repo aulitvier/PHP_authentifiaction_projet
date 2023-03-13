@@ -1,5 +1,10 @@
 <?php
-echo "<form action='processing/modify_page_processing.php?id=$a[id]' method='post'>
+require("src/modify_page_model.php");
+echo "
+        <form action='connection.html'>
+            <button>Accueil</button>
+        </form>
+        <form action='processing/modify_page_processing.php?id=$a[id]' method='post'>
             <div>
                 <label for='name_page'>Nom de la page :</label>
                 <input type='text' name='name_page' value='$a[nom]' required>

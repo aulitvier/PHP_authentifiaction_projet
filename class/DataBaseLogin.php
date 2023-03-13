@@ -26,12 +26,11 @@ class DataBaseLogin extends DataBaseRegistration {
    
             $user  = $request->fetch();
             return $user;
-            // Récupère une ligne depuis un jeu de résultats associé à l'objet PDO dans mon cas la fonction fetch me permet de récuperer
+            // Récupére une ligne depuis un jeu de résultats associé à l'objet PDO dans mon cas la fonction fetch me permet de récuperer
             // le mot de passe hashé dans un tableau si l'email existe dans la base de données
         } else {
-            echo "Vous n'avez pas remplie tout les champs";
-        }
-        
+            echo "Vous n'avez pas remplie tous les champs";
+        } 
     }
 
     /**
@@ -44,12 +43,12 @@ class DataBaseLogin extends DataBaseRegistration {
             if (password_verify($password_given, $user["mot_de_passe"])) { // password_verify permet de vérifier si le mot de passe 
                 // hashé est le même que le mot de passe en clair entrée par l'utilisateur
                 echo "Bienvenue";
-        } else { // si le mot de passe n'est pas bon
+            } else { // si le mot de passe n'est pas bon
             echo "mot de passe invalide, veuillez réessayer";
-        }
-    } else { // si l'e-mail est incorrect
+            }
+        } else { // si l'e-mail est incorrect
         echo " l'e-mail n'existe pas";
-    }
+        }
     }
     public function pageRedirect($user) {
         if ($user) {
